@@ -59,6 +59,10 @@ body {
   font-weight: 900 !important;
 }
 
+.fw-bold {
+  font-weight: 700 !important;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -67,7 +71,6 @@ img {
 
 a {
   text-decoration: none;
-  transition: var(--transition);
 }
 
 a,
@@ -277,17 +280,6 @@ p {
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   text-underline-position: from-font;
-  transition: all 0.3s ease-in-out;
-}
-
-.topbar-button:hover,
-.topbar-button:focus,
-.topbar-button:active {
-  background-color: inherit !important;
-  border-color: inherit !important;
-  text-underline-offset: 6px;
-  opacity: 0.85;
-  transform: translateY(-1px);
 }
 
 .navbar-container {
@@ -345,7 +337,7 @@ p {
 }
 
 .navbar-logo {
-  height: 45px;
+  height: 50px;
   width: auto;
   object-fit: contain;
 }
@@ -497,10 +489,22 @@ p {
 .accordion-body,
 .card-desc,
 .section-subtitle,
-.section-desc {
+.section-desc,
+.star-font {
   color: #1D293D;
   font-size: 14px;
   line-height: 20px;
+}
+
+.form-desc {
+  color: #DBEAFE;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.form-body {
+  min-height: 400px;
 }
 
 .card-bullet,
@@ -961,6 +965,19 @@ p {
 .recognition-card:hover .img-wrapper img {
   filter: brightness(0) saturate(100%) invert(80%) sepia(58%) saturate(1637%) hue-rotate(352deg) brightness(101%) contrast(103%);
   transition: none;
+}
+
+.form-container {
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.90);
+  background: #FFF;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.10), 0 8px 10px -6px rgba(0, 0, 0, 0.10);
+  max-width: 450px;
+}
+
+.form-header {
+  border-bottom: 2px solid #FFCB04;
+  padding: 10px 14px;
 }
 
 @media (max-width:768px) {
