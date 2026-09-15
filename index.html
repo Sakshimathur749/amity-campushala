@@ -81,7 +81,7 @@
   <section>
     <div class="container-fluid hero-bg-img">
       <div class="container hero-container d-flex flex-column ">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-12 col-md-7">
             <div class="d-flex flex-column gap-3">
               <span
@@ -148,7 +148,79 @@
                 </div>
                 <p class="form-desc text-center font-plus-jakarta">Official Guidance for Amity Online Programs</p>
               </div>
-              <div class="form-body"></div>
+              <div class="form-body ">
+                <form id="contactForm" class="d-flex flex-column gap-2">
+                  <div>
+                    <label for="fullName" class="form-label fw-bold text-testimonaials">Full Name<span
+                        class="text-danger">*</span></label>
+                    <input type="text" name="Name" class="form-control py-2" id="fullName"
+                      placeholder="Enter Your Full Name" required minlength="2" pattern="[A-Za-z\s]+"
+                      title="Please enter a valid name (letters only).">
+                  </div>
+                  <div>
+                    <label for="emailId" class="form-label fw-bold text-testimonaials">Email ID<span
+                        class="text-danger">*</span></label>
+                    <input type="email" name="Email" class="form-control py-2" id="emailId"
+                      placeholder="Enter Your Email Id" required>
+                  </div>
+                  <div>
+                    <label for="mobileNumber" class="form-label fw-bold text-testimonaials">Mobile Number<span
+                        class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text bg-light text-testimonaials fw-medium">
+                        <img src="https://flagcdn.com/w20/in.png" alt="India Flag" class="me-1" style="width: 18px;">
+                        +91
+                      </span>
+                      <input type="tel" name="Phone" class="form-control py-2" id="mobileNumber"
+                        placeholder="Enter 10-Digit Number" required pattern="[0-9]{10}" maxlength="10"
+                        title="Please enter a valid 10-digit mobile number.">
+                    </div>
+                  </div>
+                  <div>
+                    <label for="workExp" class="form-label fw-bold text-testimonaials">Work Exp<span
+                        class="text-danger">*</span></label>
+                    <select name="Experience" class="form-select py-2" id="workExp" required>
+                      <option value="" selected disabled>Select Work Experience</option>
+                      <option value="0">Fresher</option>
+                      <option value="1">Less than 1 Year</option>
+                      <option value="1-3">1 - 3 years</option>
+                      <option value="3-5">3 - 5 years</option>
+                      <option value="5+">5 - 10 years</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="program" class="form-label fw-bold text-testimonaials">Program of Interest<span
+                        class="text-danger">*</span></label>
+                    <select name="Program" class="form-select py-2" id="program" required>
+                      <option value="" selected disabled>Select Program</option>
+                      <optgroup label="UG Programs">
+                        <option value="Online BBA">Online BBA</option>
+                        <option value="Online BCA">Online BCA</option>
+                        <option value="Online B.Com">Online B.Com</option>
+                        <option value="Online BA">Online BA</option>
+                        <option value="Integrated Programs">Integrated Programs</option>
+                      </optgroup>
+                      <optgroup label="PG Programs">
+                        <option value="Online MBA">Online MBA</option>
+                        <option value="Online MCA">Online MCA</option>
+                        <option value="Online M.Com">Online M.Com</option>
+                        <option value="Online MA">Online MA</option>
+                        <option value="Online M.Sc">Online M.Sc</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cityId" class="form-label fw-bold text-testimonaials">City <span
+                        class="text-danger">*</span></label>
+                    <input type="text" name="City" class="form-control py-2" id="cityId" placeholder="Enter Your City"
+                      required minlength="2">
+                  </div>
+                  <button type="submit" id="submitBtn"
+                    class="btn w-100 font-900 text-uppercase d-flex align-items-center justify-content-center btn-submit">
+                    Submit Request
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -655,7 +727,7 @@
           <div class="col-md-7">
             <div class="tab-content" id="why-tabContent">
               <div class="tab-pane fade show active" id="tab-flexible" role="tabpanel">
-                <img src="./images/image.webp" alt="Flexible Online Learning" class="tab-content-img w-100">
+                <img src="./images/Untitled_design.webp" alt="Flexible Online Learning" class="tab-content-img w-100">
                 <div class="progress-divider d-flex py-3">
                   <div
                     style="width: 45%; height: 10px; background-color: #ffcb04; border-top-left-radius: 16px; border-bottom-left-radius: 16px;">
@@ -723,7 +795,7 @@
                 </a>
               </div>
               <div class="tab-pane fade show" id="tab-ai" role="tabpanel">
-                <img src="./images/image (3).webp" alt="Flexible Online Learning" class="tab-content-img w-100">
+                <img src="./images/Untitled_design2.webp" alt="Flexible Online Learning" class="tab-content-img w-100">
                 <div class="progress-divider d-flex py-3">
                   <div
                     style="width: 45%; height: 10px; background-color: #ffcb04; border-top-left-radius: 16px; border-bottom-left-radius: 16px;">
@@ -746,7 +818,7 @@
                 </a>
               </div>
               <div class="tab-pane fade show" id="tab-career" role="tabpanel">
-                <img src="./images/image (4).webp" alt="Flexible Online Learning" class="tab-content-img w-100">
+                <img src="./images/Untitled_design3.webp" alt="Flexible Online Learning" class="tab-content-img w-100">
                 <div class="progress-divider d-flex py-3">
                   <div
                     style="width: 45%; height: 10px; background-color: #ffcb04; border-top-left-radius: 16px; border-bottom-left-radius: 16px;">
@@ -986,7 +1058,7 @@
         <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-auto">
           <div class="goal-card-wrapper position-relative d-flex flex-column h-100">
             <div class="goal-badge text-white bg-learner-profile-2 text-center">
-              Tell Us Your Goal
+              GET PERSONALIZED GUIDANCE
             </div>
             <div class="goal-card d-flex flex-column flex-md-row align-items-center flex-grow-1">
               <div class="goal-icon">
@@ -1004,7 +1076,7 @@
         <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-auto">
           <div class="goal-card-wrapper position-relative d-flex flex-column h-100">
             <div class="goal-badge text-white bg-learner-profile-3 text-center">
-              Tell Us Your Goal
+              MAKE AN INFORMED CHOICE
             </div>
             <div class="goal-card d-flex flex-column flex-md-row align-items-center flex-grow-1">
               <div class="goal-icon">
@@ -1022,7 +1094,7 @@
         <div class="col-12 col-md-6 col-lg-3 mb-4 mb-md-auto">
           <div class="goal-card-wrapper position-relative d-flex flex-column h-100">
             <div class="goal-badge text-white bg-primary text-center">
-              Tell Us Your Goal
+              COMPLETE YOUR ADMISSION
             </div>
             <div class="goal-card d-flex flex-column flex-md-row align-items-center flex-grow-1">
               <div class="goal-icon">
@@ -1493,6 +1565,29 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxo0mQ-p3qi00SkdN0TEw1NrEKudLo263koz9okQy-MvHreWUjcZcszmM6VbyCG84hgRA/exec';
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      // Button disable & text change UI feedback ke liye
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Submitting...';
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          window.location.href = 'thank-you.html';
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          submitBtn.disabled = false;
+          submitBtn.innerText = 'Submit Request';
+        });
+    });
+  </script>
 
 </body>
 

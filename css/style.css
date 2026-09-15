@@ -326,7 +326,8 @@ p {
 }
 
 .btn-admission:hover,
-.btn-hero:hover {
+.btn-hero:hover,
+.btn-submit:hover {
   background-color: #E5B600 !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
@@ -344,7 +345,6 @@ p {
 
 .hero-bg-img {
   aspect-ratio: 240/71;
-  min-height: 568px;
   background-image: url("../images/Container.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -505,6 +505,8 @@ p {
 
 .form-body {
   min-height: 400px;
+  padding: 14px;
+
 }
 
 .card-bullet,
@@ -978,6 +980,32 @@ p {
 .form-header {
   border-bottom: 2px solid #FFCB04;
   padding: 10px 14px;
+}
+
+.form-label {
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+  border-radius: 6px;
+  border: 1px solid #CAD5E2;
+  background: #FFF;
+  padding: 4px 10px;
+  font-size: 12px;
+
+}
+
+.btn-submit {
+  border-radius: 8px;
+  background: #FFCB04;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+  padding: 10px 16px;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 @media (max-width:768px) {
