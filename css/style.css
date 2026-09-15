@@ -1008,6 +1008,35 @@ p {
   line-height: 16px;
 }
 
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  background: transparent;
+}
+
+/* Marquee Content Animation */
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+/* Smooth Scrolling Keyframes */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hover to Pause (Optional & UX Friendly) */
+.marquee-wrapper:hover .marquee-content {
+  animation-play-state: paused;
+}
+
 @media (max-width:768px) {
 
   .w-md-full {
