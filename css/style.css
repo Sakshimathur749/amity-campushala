@@ -295,7 +295,7 @@ p {
   background-color: rgba(0, 46, 94, 0.05);
   color: #002E5E;
   border-radius: 8px;
-  padding: 10px 18px;
+  padding: 14px 18px;
   gap: 6px;
   font-size: 14px;
   line-height: 20px;
@@ -1035,6 +1035,55 @@ p {
 /* Hover to Pause (Optional & UX Friendly) */
 .marquee-wrapper:hover .marquee-content {
   animation-play-state: paused;
+}
+
+/* Desktop / Universal Floating Button (Bottom-Right) */
+.sticky-call-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  height: 60px;
+  width: 60px;
+  background-color: var(--tertiary-color, #002e5e);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 50px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  transition: all 0.35s ease;
+}
+
+.sticky-call-btn i {
+  font-size: 18px;
+}
+
+.sticky-call-btn:hover {
+  background-color: var(--tertiary-color, #002e5e);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile Responsive Styling (Bottom Sticky Full/Bar) */
+@media (max-width: 767px) {
+  .sticky-call-btn {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    padding: 14px 16px;
+    font-size: 16px;
+    justify-content: center;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  }
 }
 
 @media (max-width:768px) {
