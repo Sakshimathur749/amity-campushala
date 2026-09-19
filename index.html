@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amity -Campushala LP</title>
-  <link rel="icon" href="images/favicon.webp" sizes="32x32" />
+  <link rel="icon" type="image/webp" href="images/favicon.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -233,6 +233,7 @@
                     <input type="text" name="City" class="form-control py-2" id="cityId" placeholder="Enter Your City"
                       required minlength="2">
                   </div>
+                  <input type="hidden" name="PageURL" id="pageURL">
                   <button type="submit" id="submitBtn"
                     class="btn w-100 font-900 text-uppercase d-flex align-items-center justify-content-center btn-submit">
                     Submit Request
@@ -1575,7 +1576,7 @@
         © 2026 Universities Nation. All rights reserved.
       </div>
       <div>
-        Design and Developed By <a href="https://mediagarh.com/" target="_blank" rel="noopener noreferrer">Mediagarh</a>
+        Design and Developed By Mediagarh
       </div>
     </div>
   </div>
@@ -1583,29 +1584,41 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxo0mQ-p3qi00SkdN0TEw1NrEKudLo263koz9okQy-MvHreWUjcZcszmM6VbyCG84hgRA/exec';
+    const scriptURL =
+      'https://script.google.com/macros/s/AKfycbxo0mQ-p3qi00SkdN0TEw1NrEKudLo263koz9okQy-MvHreWUjcZcszmM6VbyCG84hgRA/exec';
+
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
 
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Button disable & text change UI feedback ke liye
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Add current page URL
+      document.getElementById('pageURL').value = window.location.href;
+
       submitBtn.disabled = true;
       submitBtn.innerText = 'Submitting...';
 
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          window.location.href = 'thank-you.html';
-        })
-        .catch(error => {
-          console.error('Error!', error.message);
-          submitBtn.disabled = false;
-          submitBtn.innerText = 'Submit Request';
-        });
+      const formData = new FormData(form);
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors',
+        keepalive: true
+      }).catch(error => {
+        console.error('Submission error:', error);
+      });
+
+      // Redirect immediately
+      window.location.href = 'thank-you.html';
     });
   </script>
-
 </body>
 
 </html>
